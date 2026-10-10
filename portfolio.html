@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Naman Shukla | Data Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F3F6F9; --card:#FFFFFF; --ink:#12263A; --muted:#51606F; --line:#D5DDE5;
+  --bronze:#B06A38; --silver:#7C8B9B; --gold:#C99A22; --link:#1B5FBF;
+  --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1A27; --card:#152435; --ink:#E7EEF5; --muted:#9DAEBF; --line:#26394D;
+    --bronze:#D58B58; --silver:#A9B6C4; --gold:#E2B83E; --link:#7FB2FF;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1A27; --card:#152435; --ink:#E7EEF5; --muted:#9DAEBF; --line:#26394D;
+  --bronze:#D58B58; --silver:#A9B6C4; --gold:#E2B83E; --link:#7FB2FF;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.6 var(--body)}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+h2{font-size:clamp(28px,4vw,38px);font-weight:800;margin-bottom:28px;letter-spacing:-.01em}
+h3{font-size:21px;font-weight:700}
+p{margin:0}
+section{padding:56px 0;border-top:1px solid var(--line)}
+
+/* hero */
+.hero{padding:72px 0 56px;border-top:0}
+.hero h1{font-size:clamp(46px,9vw,92px);font-weight:800;letter-spacing:-.03em}
+.hero .role{font-family:var(--head);font-size:clamp(20px,3vw,28px);font-weight:500;color:var(--muted);margin:14px 0 28px}
+.hero .lede{max-width:60ch;font-size:20px}
+.layers{margin-top:44px;display:grid;gap:10px}
+.layer{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center}
+.layer b{font-family:var(--head);font-size:20px}
+.bar{position:relative;border-radius:6px;padding:14px 18px;color:#fff;font-weight:600;transform-origin:left;animation:fill .9s cubic-bezier(.2,.7,.2,1) both}
+.bar.b{background:var(--bronze);width:46%}
+.bar.s{background:var(--silver);width:72%;animation-delay:.25s}
+.bar.g{background:var(--gold);width:100%;color:#1d1700;animation-delay:.5s}
+.bar span{white-space:nowrap}
+@keyframes fill{from{transform:scaleX(.05);opacity:0}to{transform:scaleX(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){.bar{animation:none}html{scroll-behavior:auto}}
+@media (max-width:640px){
+  .layer{grid-template-columns:1fr;gap:4px}
+  .bar{width:100%!important}
+  .bar span{white-space:normal}
+}
+
+/* projects */
+.proj{display:grid;grid-template-columns:1fr;gap:6px;padding:22px 0;border-bottom:1px solid var(--line)}
+.proj:last-child{border-bottom:0}
+.proj .win{color:var(--bronze);font-weight:600}
+.proj p{max-width:68ch;color:var(--muted)}
+.proj .tools{font-size:16px;color:var(--ink);opacity:.8}
+.grp{font-family:var(--head);font-size:22px;font-weight:700;margin:36px 0 4px}
+.grp:first-of-type{margin-top:0}
+
+/* experience */
+.job{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:20px 0}
+.job .when{color:var(--muted);font-weight:600}
+.job ul{margin:10px 0 0;padding-left:20px;max-width:68ch}
+.job li{margin:4px 0}
+@media (max-width:640px){.job{grid-template-columns:1fr;gap:4px}}
+
+/* stack */
+.stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 20px}
+.box h3{font-size:18px;margin-bottom:8px}
+.box p{color:var(--muted);font-size:17px}
+
+.contact p{max-width:56ch;margin-bottom:18px}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+.links a{padding:12px 20px;border:2px solid var(--ink);border-radius:6px;color:var(--ink);font-weight:600;text-decoration:none}
+.links a:hover{background:var(--ink);color:var(--bg)}
+footer{padding:28px 0 40px;color:var(--muted);font-size:15px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <h1>Naman Shukla</h1>
+  <div class="role">Data Engineer in Gurugram, Haryana</div>
+  <p class="lede">I spend my days building the pipelines and platforms that finance and sales teams rely on, on Azure Data Factory, Databricks, PySpark and SQL. Over 4.5 years I have moved data from raw files to reports people can trust, and cut the manual work along the way.</p>
+  <div class="layers" aria-label="How my work flows through data layers">
+    <div class="layer"><b>Bronze</b><div class="bar b"><span>Ingest and validate</span></div></div>
+    <div class="layer"><b>Silver</b><div class="bar s"><span>Reconcile and model</span></div></div>
+    <div class="layer"><b>Gold</b><div class="bar g"><span>Serve reports, dashboards and chat</span></div></div>
+  </div>
+</div></header>
+
+<main>
+<section id="about"><div class="wrap">
+  <h2>About</h2>
+  <p style="max-width:66ch">I am a Data Engineer at NCR Voyix, where I design ETL and ELT pipelines for enterprise financial and customer data. My work covers ingestion into Azure Data Lake, layered models in Synapse and Databricks, reconciliation across systems, and the monitoring that keeps mission-critical reports on time. I like fixing the root cause of a data problem and then automating the fix so nobody has to repeat it.</p>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Selected work</h2>
+
+  <div class="grp">Pipelines and platforms</div>
+
+  <article class="proj">
+    <h3>Month-end financial reporting automation</h3>
+    <div class="win">90% less manual effort</div>
+    <p>Data moves from a Blob stage layer through ADF into a Synapse trans layer, then a hub layer and a final reporting layer. ADF triggers and layer-by-layer dependencies replaced the manual hand-offs. A serverless Synapse view sits over the reporting layer.</p>
+    <div class="tools">Azure Data Factory, Synapse, Blob Storage</div>
+  </article>
+
+  <article class="proj">
+    <h3>Synapse to Databricks migration</h3>
+    <div class="win">MRF job from 12+ hours to 1 to 1.5 hours</div>
+    <p>Moved the General Ledger and Management Reporting Foundation procedures from Synapse to Databricks. The General Ledger data is transactional and refreshes every 15 minutes, so I built an Auto Loader based framework for it.</p>
+    <div class="tools">Databricks, PySpark, Auto Loader</div>
+  </article>
+
+  <article class="proj">
+    <h3>Oracle EPM, GL and MRF reconciliation</h3>
+    <div class="win">Audit-ready financial reporting</div>
+    <p>Pulls Oracle EPM data and reconciles it with General Ledger and MRF data across nine segments, including account, department, company and geography codes. A Power BI dashboard shows where source, GL and MRF agree.</p>
+    <div class="tools">Databricks, Oracle EPM, Power BI</div>
+  </article>
+
+  <article class="proj">
+    <h3>Site count automation</h3>
+    <div class="win">Early weekly view of active customer sites</div>
+    <p>Supports the company's reported revenue-per-site metric. Data from Salesforce, billing, quoting, ERP and other sources lands in a silver layer. SQL procedures apply the site-count logic and build a gold layer, exposed as weekly and monthly views by product and site type.</p>
+    <div class="tools">Azure Data Factory, Synapse, Synapse serverless</div>
+  </article>
+
+  <article class="proj">
+    <h3>Data validation and monitoring framework</h3>
+    <div class="win">Problems caught at landing, not in reports</div>
+    <p>Bronze-layer checks confirm each file is not empty, record counts match the source, key and amount columns have no nulls, and data is fresh. I also built a detector for zero-byte files with proactive alerts.</p>
+    <div class="tools">ADF, Logic Apps, Synapse</div>
+  </article>
+
+  <article class="proj">
+    <h3>Secure regional report delivery</h3>
+    <div class="win">CSV attachments replaced with a controlled hand-off</div>
+    <p>Eight regions used to receive data as emailed CSV files. An ADF pipeline now builds one table per domain with domain-specific procedures. A Logic App writes the files to a storage container and emails the location, with each month kept in its own partition for history.</p>
+    <div class="tools">ADF, Synapse, Logic Apps, Azure Storage</div>
+  </article>
+
+  <div class="grp">Analytics products on top of the gold layer</div>
+
+  <article class="proj">
+    <h3>Expense Analytics Dashboard</h3>
+    <div class="win">70% less reliance on manual SQL and dashboards</div>
+    <p>Ingests accounts payable data from on-prem, cloud and Workday sources into a gold layer of card and cash spend. A chat interface built with Azure OpenAI lets non-technical users ask questions in plain language, with charts, question history and follow-up suggestions.</p>
+    <div class="tools">Azure OpenAI, Synapse, REST API</div>
+  </article>
+
+  <article class="proj">
+    <h3>Sales quota planning engine</h3>
+    <div class="win">Shows where existing customers can grow</div>
+    <p>A bottom-up engine ties seller and territory quotas to compensation. It compares current-year results with the prior year and with the open sales pipeline. A Databricks agent over a materialized view answers questions in business terms.</p>
+    <div class="tools">Databricks, Supervisor and Genie Agents, SQL</div>
+  </article>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="job">
+    <div class="when">May 2023 to present</div>
+    <div>
+      <h3>Data Engineer, NCR Voyix</h3>
+      <ul>
+        <li>Subject matter expert for General Ledger, MRF and Contract File Value data: job failures, data issues and new reporting views.</li>
+        <li>Design ingestion frameworks into Azure Data Lake and layered models for financial and customer reporting.</li>
+        <li>Root-cause pipeline problems in ADF and Synapse, then automate the fix.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="job">
+    <div class="when">Feb 2022 to Mar 2023</div>
+    <div>
+      <h3>Analyst, Capgemini</h3>
+      <ul>
+        <li>Investigated critical production issues and put preventive measures in place.</li>
+        <li>Worked on Databricks administration, including Unity Catalog, Delta Sharing, cluster policies and job orchestration.</li>
+        <li>Ran a proof of concept moving T-SQL stored procedures to PySpark.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="job">
+    <div class="when">2018 to 2022</div>
+    <div><h3>B.Tech, Computer Science</h3><p style="color:var(--muted)">GLA University</p></div>
+  </div>
+</div></section>
+
+<section id="stack"><div class="wrap">
+  <h2>Toolkit</h2>
+  <div class="stack">
+    <div class="box"><h3>Orchestration</h3><p>Azure Data Factory, Logic Apps, triggers and dependency design</p></div>
+    <div class="box"><h3>Processing</h3><p>Databricks, PySpark, Auto Loader, Delta Sharing, Unity Catalog</p></div>
+    <div class="box"><h3>Storage and warehousing</h3><p>Azure Synapse, Azure Data Lake, Blob Storage, T-SQL</p></div>
+    <div class="box"><h3>Reporting</h3><p>Power BI, Synapse serverless views, SQL</p></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Get in touch</h2>
+  <p>I am open to conversations about data engineering roles and platform work.</p>
+  <div class="links">
+    <a href="mailto:shuklaman787@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/nshukla2208" rel="noopener">LinkedIn</a>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">Naman Shukla, Gurugram, Haryana</div></footer>
+</body>
+</html>
